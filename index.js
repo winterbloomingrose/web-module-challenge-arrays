@@ -2,7 +2,7 @@
 
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
-    "Banana Nut Fudge",
+    "Banana Nut Fudge", /* index 0*/
     "Black Walnut",
     "Burgundy Cherry",
     "Butterscotch Ribbon",
@@ -32,7 +32,7 @@ const originalFlavors = [
     "Rocky Road",
     "Strawberry",
     "Vanilla",
-    "Vanilla Burnt Almond"
+    "Vanilla Burnt Almond" /* index 30 */
 ]
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -100,11 +100,13 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(yourArray){
+    const exactlyThirtyone = yourArray
+    exactlyThirtyone.splice(-1,1)
+    return exactlyThirtyone
 }
 
-
+/* test: i tried using 'pop' as well but read that it is not the best method as it edits the existing array */ console.log(removeLastFlavor(rainbowSherb))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -117,10 +119,11 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(yourArray, indexNumber){
+    return yourArray[indexNumber]
 }
 
+/*test*/ console.log(getFlavorByIndex(originalFlavors, 30)  /* returns "Vanilla Burnt Almond" = success! */
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -137,7 +140,7 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
+function removeFlavorByName(yourArray){
     /*your code here*/
 }
 
@@ -163,7 +166,7 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
+function filterByWord(yourArray){
     /*your code here*/
 }
 
@@ -180,7 +183,7 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(originalFlavors){
     /*code here*/
 }
 
