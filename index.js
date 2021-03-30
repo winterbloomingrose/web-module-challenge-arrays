@@ -171,11 +171,16 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(yourArray, flavorFilter){
-    const filteredMenu = yourArray.includes(flavorFilter)
-    return filteredMenu
+    const filteredArray = [];
+    for (let i=0; i <yourArray.length; i++) {
+        if (yourArray[i].includes(flavorFilter)){
+            filteredArray.push(yourArray[i])
+        }
+    }
+    return filteredArray;
 }
 
-/* test */ console.log(filterByWord(originalFlavors, "Chocolate"))
+/* test */ console.log(filterByWord(originalFlavors, "Vanilla"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -190,7 +195,7 @@ Use the getAverageWordLength function below to do the following:
 */
 
 function getAverageWordLength(originalFlavors){
-    /*code here*/
+    
 }
 
 
